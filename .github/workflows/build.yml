@@ -15,7 +15,7 @@ jobs:
   # Build job. Builds app for Android with Buildozer
   build-android:
     name: Build for Android
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
 
     steps:
       - name: Checkout
@@ -28,7 +28,7 @@ jobs:
         id: buildozer
         with:
           repository_root: master
-          workdir: test_app
+          workdir: ppu_kivy_app
           buildozer_version: stable
 
       - name: Upload artifacts
